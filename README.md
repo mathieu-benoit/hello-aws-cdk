@@ -27,3 +27,4 @@ export class HelloCdkStack extends cdk.Stack {
 }
 EOF
 ```
+We also edited the [lib/hello-cdk-stack.ts](/hello-cdk/lib/hello-cdk-stack.ts) file in order to provision an S3 bucket.
