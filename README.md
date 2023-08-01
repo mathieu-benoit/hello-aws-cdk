@@ -1,7 +1,7 @@
 # hello-cdk
 
-This app has been created following this [AWS doc](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html), here is the summary of the command to achieve this:
-```
+This app has been created following this [AWS doc](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html), here is the summary of the commands to achieve this:
+```bash
 npm install -g aws-cdk
 cdk version
 
@@ -28,3 +28,14 @@ export class HelloCdkStack extends cdk.Stack {
 EOF
 ```
 We also edited the [lib/hello-cdk-stack.ts](/hello-cdk/lib/hello-cdk-stack.ts) file in order to provision an S3 bucket.
+
+Then to deploy it we can run these commands:
+```bash
+aws configure
+
+cdk bootstrap # aws://ACCOUNT-NUMBER/REGION
+
+cdk synth --json --version-reporting false --path-metadata false
+
+cdk deploy
+```
